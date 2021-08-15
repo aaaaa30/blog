@@ -1,0 +1,65 @@
+body{
+	font-family: Arial;
+	padding: 20px;
+	background: #f1f1f1;
+}
+.row{
+	display: flex;
+}
+.header{
+	padding: 30px;
+	font-size: 40px;
+	text-align: center;
+	background: white;
+}
+.leftcolumn{
+	width: 75%;
+float: left;
+}
+.rightcolumn{
+	width: 25%;
+	float: right;
+	
+	padding-left: 20px;
+}
+.fakeimg{
+	background-color: #aaa;
+	width: 90%;
+	padding: 20px;
+}
+.card{
+	background-color: white;
+	padding: 20px;
+	margin-top:20px;
+}
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+
+}
+
+.footer{
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+	margin-top:20px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+.a_styles{
+	text-decoration: none; /* отменяем стандартное подчеркивание,
+                            * иначе будет две полосы */
+    border-bottom: 3px solid pink; /* добавляем нижнюю границу */
+    padding-bottom: 1px; /* делаем небольшое расстояние между текстом и границей */
+}
+.a_styles:hover{
+	text-decoration: underline;
+}
