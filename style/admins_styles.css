@@ -1,3 +1,6 @@
+
+
+
 .form-4 {
     /* Size and position */
     width: 300px;
@@ -92,7 +95,16 @@ body{
     width: 55%;
     float: left;
 }
+ .popup{
 
+    border: 1px solid black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+   }
 .card{
     background-color: white;
     padding: 20px;
@@ -135,4 +147,43 @@ body{
     margin-right: 5px; /* Отступ слева */
     border: 1px solid #000; /* Рамка вокруг текста */
     padding: 3px; /* Поля вокруг текста */
+   }
+
+ .popup{
+
+    border: 1px solid black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+   }
+
+   .popup_body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+   }
+   .popup_content{
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 30px;
+   }
+   .popup_title{
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+   }
+   .popup_close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
    }

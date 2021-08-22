@@ -1,3 +1,6 @@
+
+
+
 <?php
 $const = mysqli_connect('localhost', 'root' ,'')  or die ("html>script language='JavaScript'>alert('Не удается подключиться к базе данных. Повторите попытку позже.'),history.go(-1)/script>/html>") ;
 mysqli_select_db( $const, "blog" );
@@ -5,8 +8,8 @@ $query = "SELECT * From posts";
 $result = mysqli_query( $const, $query);
 
 
-  if(isset($_GET["id"])){
-      $sql = "DELETE From posts WHERE id = ".$_GET["id"]."";
+ /* if(isset($_GET["id"])){
+     / $sql = "DELETE From posts WHERE id = ".$_GET["id"]."";
 
       if($const->query($sql)){
         echo "Данные успешно удалены";
@@ -14,7 +17,7 @@ $result = mysqli_query( $const, $query);
         echo "Ошибка: " . $const->error;
     }
     $const->close();
-    }
+    }*/
 
 ?>
 
@@ -34,12 +37,35 @@ $result = mysqli_query( $const, $query);
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
-    <link rel="stylesheet" type="text/css" href="/style/admins_styles.css">
+    <link rel="stylesheet" type="text/css" href="/style//admins_styles.css">
     <!-- MDB -->
     <link rel="stylesheet" href="/css/mdb.min.css" />
   </head>
   <body>
     <!-- Start your project here-->
+
+
+<div id="popup" class="popup">
+  <div class="popup_body">
+    <div class="popup_content">
+      <a href="" class="popup_close">X</a>
+      <div class="popup_title">Модальное окно</div>
+      <div class="popup_text">
+        
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
    	<div class="header">
    		<h2>Admin Panel</h2>
    	</div>
@@ -61,6 +87,8 @@ $result = mysqli_query( $const, $query);
    			
    		</div>
    	</div>
+
+
 
    	<div class="footer">
    			<h2>Footer</h2>
